@@ -3,7 +3,17 @@
 <html lang="pt-br">
 <head>
 <style>
+.artigo-autor {
+font-weight: bold;
+}    
+p {
+font-weight: bold;
+}
+div p {
+font-weight: bold;
+}    
 header {
+font-weight: bold;    
 background-color: #183C63;
 color: #FFFFFF;
 text-align: center;
@@ -13,16 +23,24 @@ padding: 5px;
 border: 5px solid #cf1010;
 }
 main {
-background-color: #FFFFFF;
+display: flex;
 color: #183C63;
 margin: 0 auto;
 max-width: 800px;
 }
 img  {
 max-width: 80px;    
+max-height: 80px;
 }
-    
+    .artigo-autor {
+font-weight: bold;
+}
+button  {
+max-width: 50px;
+max-height: 50px;
+}
 </style>    
+
 <title>Blog</title>    
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -35,9 +53,23 @@ max-width: 80px;
 </header>
 <main>
 <img src="tecnologia.png" alt="Lampada Tecnlogica">    
+<div>
 <h2>Meu primeiro post</h2>
-<p>Por: Marcelo Paludetto</p>
+<p class="artigo-autor">Por: Marcelo Paludetto </p>
 <p>Boas-vindas ao meu novo blog! Aqui vou compartilhar dicas de programação e curiosidades da área de tecnologia.</p>
-</main>
+</div>
 </body>
+<button>❤️<span>0</span></button>
+<button>👍<span>0</span></button>
+
+<script>
+const botoes = document.querySelectorAll("button");
+
+botao.addEventListener("click", botaoClicado);
+function botaoClicado() {
+let texto = botao.querySelector("span");
+texto.textContent++;
+}
+</script>
+
 </html>
